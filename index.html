@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="吳柏瀧 (Po-Lung Wu) 的個人數位學術與專業經歷看板。專長於數位雙生、物聯網 AIoT、虛擬實境/擴增實境 (VR/AR)、電腦圖學與遊戲開發。" />
+  <title>吳柏瀧 Po-Lung Wu | 個人數位履歷與即時看板</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans, Noto Sans TC & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Noto+Sans+TC:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-aurora">
+  <!-- Background Animated Gradients -->
+  <div class="mesh-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <div class="site-container">
+    <!-- Top Action Bar -->
+    <header class="top-nav">
+      <div class="status-indicator">
+        <span class="status-dot"></span>
+        <span class="status-text">嶺東科技大學 數位媒體設計系 · 專任講師</span>
+      </div>
+      <div class="header-actions">
+        <button id="format-toggle-btn" class="glass-btn action-pill" title="切換 12小時 / 24小時制" aria-label="Toggle Time Format">
+          <i data-lucide="clock"></i>
+          <span id="format-label">24H</span>
+        </button>
+        <button id="theme-toggle-btn" class="glass-btn icon-circle" title="切換主題色彩" aria-label="Switch Theme Palette">
+          <i data-lucide="palette"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Hero: Profile Identity & Real-Time Clock -->
+    <section class="hero-section glass-card" id="hero-portal">
+      <div class="hero-grid">
+        <!-- Profile Identity (Strictly No Photos, Monogram Badge) -->
+        <div class="profile-summary">
+          <div class="avatar-container">
+            <div class="avatar-ring"></div>
+            <div class="avatar-core">
+              <span class="avatar-initials">PW</span>
+            </div>
+            <span class="avatar-badge" title="狀態：在線"></span>
+          </div>
+
+          <div class="profile-details">
+            <div class="greeting-box">
+              <span id="time-greeting" class="time-greeting">歡迎回來</span>
+            </div>
+            <h1 class="hero-name">
+              <span class="name-zh">吳柏瀧</span>
+              <span class="name-en">Po-Lung Wu</span>
+            </h1>
+            <p class="hero-title">
+              嶺東科技大學 數位媒體設計系 專任講師<br />
+              中部獨立勇者交流會 (TiGG) 共同創辦人 · 資深技術顧問
+            </p>
+            <div class="contact-chips">
+              <a href="mailto:wupojung@gmail.com" class="chip-link">
+                <i data-lucide="mail"></i>
+                <span>wupojung@gmail.com</span>
+              </a>
+              <a href="https://hackmd.io/@wupojung/polungwu-cv" target="_blank" rel="noopener noreferrer" class="chip-link">
+                <i data-lucide="file-text"></i>
+                <span>HackMD 原文履歷</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Real-Time Clock Widget -->
+        <div class="hero-clock-box">
+          <div class="time-readout">
+            <div class="time-digits">
+              <span id="hours">00</span>
+              <span class="time-separator">:</span>
+              <span id="minutes">00</span>
+              <span class="time-separator">:</span>
+              <span id="seconds">00</span>
+            </div>
+            <div class="time-meta">
+              <span id="period" class="period-indicator">AM</span>
+              <div class="seconds-progress-ring">
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                  <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <path id="seconds-circle" class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="date-row">
+            <div class="date-pill">
+              <i data-lucide="calendar"></i>
+              <span id="full-date">載入日期中...</span>
+            </div>
+            <div class="date-pill">
+              <i data-lucide="globe"></i>
+              <span id="timezone">GMT+8</span>
+            </div>
+          </div>
+
+          <div class="metric-mini-grid">
+            <div class="mini-metric">
+              <span class="metric-label">目前時段階段</span>
+              <span class="metric-val" id="day-phase">早晨 Morning</span>
+            </div>
+            <div class="mini-metric">
+              <span class="metric-label">年度天數累積</span>
+              <span class="metric-val" id="day-of-year">第 000 天</span>
+            </div>
+            <div class="mini-metric">
+              <span class="metric-label">今年已過進度</span>
+              <span class="metric-val" id="year-progress">0%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Counters -->
+      <div class="stats-counter-strip">
+        <div class="stat-box">
+          <span class="stat-number">2+</span>
+          <span class="stat-text">德國紅點獎指導獲獎</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">12+</span>
+          <span class="stat-text">學術研討會論文發表</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">10+</span>
+          <span class="stat-text">產學合作與業界專案</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">9+</span>
+          <span class="stat-text">跨領域企業技術顧問</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation Tabs for Reorganized Sections -->
+    <nav class="section-tabs" aria-label="履歷分類導覽">
+      <button class="tab-btn active" data-tab="experience">
+        <i data-lucide="briefcase"></i>
+        <span>經歷與學歷</span>
+      </button>
+      <button class="tab-btn" data-tab="projects">
+        <i data-lucide="layers"></i>
+        <span>執行專案與產學</span>
+      </button>
+      <button class="tab-btn" data-tab="awards">
+        <i data-lucide="award"></i>
+        <span>指導獲獎榮譽</span>
+      </button>
+      <button class="tab-btn" data-tab="research">
+        <i data-lucide="book-open"></i>
+        <span>學術論文發表</span>
+      </button>
+      <button class="tab-btn" data-tab="services">
+        <i data-lucide="shield-check"></i>
+        <span>評審與審稿服務</span>
+      </button>
+    </nav>
+
+    <!-- Tab 1: 經歷與學歷 (Experience & Education) -->
+    <section class="tab-content active" id="tab-experience">
+      <div class="content-grid-2col">
+        <!-- 經歷 Experience -->
+        <div class="glass-card section-card">
+          <div class="card-header">
+            <div class="card-icon"><i data-lucide="building-2"></i></div>
+            <div>
+              <h2 class="card-title">專業工作經歷</h2>
+              <p class="card-subtitle">學界任教、社群創辦與業界技術顧問經驗</p>
+            </div>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker current"></div>
+              <div class="timeline-body">
+                <span class="timeline-role">專任講師</span>
+                <h3 class="timeline-org">嶺東科技大學 數位媒體設計系</h3>
+                <p class="timeline-desc">講授數位媒體、遊戲程式、虛擬實境與互動設計課程，並指導學生參與國際與國內競賽。</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-body">
+                <span class="timeline-role">兼任講師</span>
+                <h3 class="timeline-org">國立勤益科技大學 電子工程系</h3>
+                <p class="timeline-desc">講授電子工程與電腦軟硬體整合相關專業領域。</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-body">
+                <span class="timeline-role">共同創辦人</span>
+                <h3 class="timeline-org">中部獨立勇者交流會 (TiGG)</h3>
+                <p class="timeline-desc">凝聚中部獨立遊戲開發者、數位創作者與學生團隊，推動實體聚會、作品發表與跨界技術交流。</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-body">
+                <span class="timeline-role">技術總監 / 技術顧問</span>
+                <h3 class="timeline-org">偵誠科技有限公司</h3>
+                <p class="timeline-desc">主導中彰投交通協控維運平台、台中市警察局路口監視器管理平台架構設計。</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-body">
+                <span class="timeline-role">技術顧問</span>
+                <h3 class="timeline-org">力學股份有限公司 · 永億資訊有限公司 · 首羿國際</h3>
+                <p class="timeline-desc">提供車牌辨識系統、樣品溯源追蹤系統及軟硬體整合技術諮詢。</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-body">
+                <span class="timeline-role">專案主任 (POS Team)</span>
+                <h3 class="timeline-org">王品集團 資訊部</h3>
+                <p class="timeline-desc">主導集團銷售系統 (POS)、石二鍋 APP、候位取號系統及王品行動秘書 (EIP) 開發建置。</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-body">
+                <span class="timeline-role">電玩程式設計師</span>
+                <h3 class="timeline-org">光磊網路科技股份有限公司</h3>
+                <p class="timeline-desc">負責遊戲邏輯架構、圖形運算與核心系統程式設計。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 學歷與專業技能 Education & Expertise -->
+        <div class="glass-card section-card">
+          <div class="card-header">
+            <div class="card-icon"><i data-lucide="graduation-cap"></i></div>
+            <div>
+              <h2 class="card-title">學歷背景</h2>
+              <p class="card-subtitle">國立勤益科技大學 電子工程所專業訓練</p>
+            </div>
+          </div>
+
+          <div class="edu-card-list">
+            <div class="edu-item">
+              <div class="edu-badge">碩士 Master</div>
+              <h3 class="edu-school">國立勤益科技大學 電子工程系</h3>
+              <p class="edu-major"><strong>主修領域：</strong>電腦圖學 (Computer Graphics)</p>
+            </div>
+
+            <div class="edu-item">
+              <div class="edu-badge">學士 Bachelor</div>
+              <h3 class="edu-school">國立勤益科技大學 電子工程系</h3>
+              <p class="edu-major"><strong>主修領域：</strong>影像處理 (Image Processing)</p>
+            </div>
+          </div>
+
+          <div class="card-header mt-8">
+            <div class="card-icon"><i data-lucide="cpu"></i></div>
+            <div>
+              <h2 class="card-title">核心研究與專業領域</h2>
+              <p class="card-subtitle">跨界結合硬體物聯網與數位虛擬互動</p>
+            </div>
+          </div>
+
+          <div class="skill-tag-cloud">
+            <span class="skill-tag">電腦圖學 Computer Graphics</span>
+            <span class="skill-tag">數位雙生 Digital Twin</span>
+            <span class="skill-tag">物聯網架構 AIoT / MQTT / Modbus</span>
+            <span class="skill-tag">Unity CI/CD (Jenkins + Git)</span>
+            <span class="skill-tag">虛擬實境 VR & 擴增實境 AR</span>
+            <span class="skill-tag">WebAPI & LINE 機器人開發</span>
+            <span class="skill-tag">影像辨識與電腦視覺</span>
+            <span class="skill-tag">企業級 POS / EIP 系統架構</span>
+            <span class="skill-tag">遊戲設計與介面評估</span>
+          </div>
+
+          <!-- 座右銘小卡 -->
+          <div class="quote-container mt-6">
+            <p class="quote-text">「結合工程邏輯與數位美學，實踐虛實整合與永續創新的無限可能。」</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 2: 執行專案與產學 (Projects & Industry) -->
+    <section class="tab-content" id="tab-projects">
+      <div class="glass-card section-card">
+        <div class="card-header">
+          <div class="card-icon"><i data-lucide="terminal"></i></div>
+          <div>
+            <h2 class="card-title">業界專案與產官學合作</h2>
+            <p class="card-subtitle">涵蓋數位教材監製、AIoT 物聯網、公共警政系統與大型企業系統</p>
+          </div>
+        </div>
+
+        <!-- 產學合作計畫亮點 -->
+        <div class="highlight-banner">
+          <div class="highlight-badge"><i data-lucide="sparkles"></i> 經濟部產學合作計畫</div>
+          <h3 class="highlight-title">110年度學界推動在地產業科技加值創新計劃</h3>
+          <p class="highlight-meta">執行期程：110/04 ~ 110/11 ｜ 補助單位：經濟部 ｜ 擔任角色：<strong>協同主持人 (84萬元)</strong></p>
+        </div>
+
+        <!-- 專案分類網格 -->
+        <div class="projects-grid">
+          <!-- iPAS 數位課程系列 -->
+          <div class="project-card">
+            <div class="project-badge">iPAS 數位課程</div>
+            <h3 class="project-title">MQTT的物聯網環境監測</h3>
+            <p class="project-role">執行製作 (監製) · 2024</p>
+            <p class="project-desc">經濟部產發署主辦，專為物聯網專業認證規劃之數位教學系統與環境監測實作課程。</p>
+            <a href="https://collegeplus.itri.org.tw/course/6829#/" target="_blank" rel="noopener noreferrer" class="project-link">
+              <span>課程連結 (工研院)</span>
+              <i data-lucide="external-link"></i>
+            </a>
+          </div>
+
+          <div class="project-card">
+            <div class="project-badge">iPAS 數位課程</div>
+            <h3 class="project-title">WebAPI程式設計入門 - 以LINE機器人為例</h3>
+            <p class="project-role">講師 (主講人) · 2023</p>
+            <p class="project-desc">經濟部產發署主講課程，透過實作串接 WebAPI 與 LINE Bot，帶領學員快速建構智慧互動服務。</p>
+            <a href="https://collegeplus.itri.org.tw/course/4146#" target="_blank" rel="noopener noreferrer" class="project-link">
+              <span>課程連結 (工研院)</span>
+              <i data-lucide="external-link"></i>
+            </a>
+          </div>
+
+          <div class="project-card">
+            <div class="project-badge">iPAS 數位課程</div>
+            <h3 class="project-title">物聯網 Modbus 協定入門</h3>
+            <p class="project-role">講師 (主講人) · 2023</p>
+            <p class="project-desc">經濟部產發署主講，深入淺出解析工業物聯網基礎協定 Modbus，連結感測器與控制設備。</p>
+            <a href="https://collegeplus.itri.org.tw/course/4224#/" target="_blank" rel="noopener noreferrer" class="project-link">
+              <span>課程連結 (工研院)</span>
+              <i data-lucide="external-link"></i>
+            </a>
+          </div>
+
+          <!-- 政府公共與 AI 專案 -->
+          <div class="project-card">
+            <div class="project-badge">AI & 虛擬互動</div>
+            <h3 class="project-title">十大重點產業AI化誓師啟航活動 - 虛擬主持人</h3>
+            <p class="project-role">專案經理 (PM) · 數位產業署 · 2023</p>
+            <p class="project-desc">整合 3D 虛擬角色動態捕捉、即時語音生成與雲端串流，打造大型國家級活動智慧虛擬主持人。</p>
+          </div>
+
+          <div class="project-card">
+            <div class="project-badge">智慧城市與警政</div>
+            <h3 class="project-title">中彰投交通協控計畫維運平台</h3>
+            <p class="project-role">技術顧問 · 偵誠科技 · 2022</p>
+            <p class="project-desc">跨縣市路網車流監控協作與維運儀表板架構設計，提高跨域即時交通應變效能。</p>
+          </div>
+
+          <div class="project-card">
+            <div class="project-badge">智慧城市與警政</div>
+            <h3 class="project-title">台中市警察局路口監視器管理平台</h3>
+            <p class="project-role">專案經理 (PM) · 偵誠科技 · 2019</p>
+            <p class="project-desc">巨量影像監控節點調度、設備連線狀態即時檢測與高穩定性巡檢管理系統。</p>
+          </div>
+
+          <div class="project-card">
+            <div class="project-badge">電腦視覺</div>
+            <h3 class="project-title">智慧車牌辨識系統</h3>
+            <p class="project-role">技術顧問 · 永億資訊 · 2022</p>
+            <p class="project-desc">高辨識率即時車輛進出管制演算法最佳化與硬體整合。</p>
+          </div>
+
+          <div class="project-card">
+            <div class="project-badge">企業級供應鏈</div>
+            <h3 class="project-title">豐泰企業樣品溯源追蹤系統</h3>
+            <p class="project-role">專案經理 (PM) · 永億資訊 · 2018</p>
+            <p class="project-desc">跨國鞋業製程樣品履歷追蹤與條碼/RFID倉儲管理流程智慧化。</p>
+          </div>
+
+          <!-- 王品集團專案 -->
+          <div class="project-card">
+            <div class="project-badge">連鎖餐飲系統</div>
+            <h3 class="project-title">石二鍋 APP & 候位取號系統</h3>
+            <p class="project-role">專案經理 · 王品集團 · 2017 - 2018</p>
+            <p class="project-desc">全台門市客流候位分流、行動雲端取號排隊系統與使用者體驗流程最佳化。</p>
+          </div>
+
+          <div class="project-card">
+            <div class="project-badge">連鎖餐飲系統</div>
+            <h3 class="project-title">王品集團 POS 銷售系統 & 行動秘書 EIP</h3>
+            <p class="project-role">專案經理 · 王品集團 (POS Team) · 2016 - 2017</p>
+            <p class="project-desc">多品牌連鎖餐飲核心點餐結帳 POS 軟體與全體員工企業入口行動辦公 EIP 建置。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 3: 指導學生獲獎紀錄 (Awards) -->
+    <section class="tab-content" id="tab-awards">
+      <div class="glass-card section-card">
+        <div class="card-header">
+          <div class="card-icon"><i data-lucide="trophy"></i></div>
+          <div>
+            <h2 class="card-title">指導學生獲獎殊榮</h2>
+            <p class="card-subtitle">國際級德國紅點設計大獎、巴哈姆特 ACG 大賽與放視大賞入圍榮譽</p>
+          </div>
+        </div>
+
+        <!-- 德國紅點大獎專區 -->
+        <div class="award-tier">
+          <div class="award-tier-header">
+            <span class="reddot-badge">Red Dot Award Winner 2023</span>
+            <h3 class="tier-title">德國紅點設計獎 (國際頂尖設計殊榮)</h3>
+          </div>
+
+          <div class="award-grid">
+            <div class="award-card reddot-card">
+              <div class="award-icon-box">
+                <i data-lucide="sparkles"></i>
+              </div>
+              <div class="award-body">
+                <div class="award-tag">Red Dot Winner 2023</div>
+                <h4 class="award-title">PING PING PONG PONG (拼拼乓乓)</h4>
+                <p class="award-desc">創新的互動式遊戲與視覺體驗設計，榮獲 2023 年德國紅點設計大獎肯定。</p>
+                <a href="https://www.red-dot.org/project/ping-ping-pong-pong-66683" target="_blank" rel="noopener noreferrer" class="award-link">
+                  <span>查看 Red Dot 官網得獎專頁</span>
+                  <i data-lucide="external-link"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="award-card reddot-card">
+              <div class="award-icon-box">
+                <i data-lucide="sparkles"></i>
+              </div>
+              <div class="award-body">
+                <div class="award-tag">Red Dot Winner 2023</div>
+                <h4 class="award-title">Project Salaman (薩拉曼計畫)</h4>
+                <p class="award-desc">具備完整世界觀與精緻視覺互動系統的冒險敘事作品，榮獲 2023 德國紅點設計大獎。</p>
+                <a href="https://www.red-dot.org/project/project-salaman-66684" target="_blank" rel="noopener noreferrer" class="award-link">
+                  <span>查看 Red Dot 官網得獎專頁</span>
+                  <i data-lucide="external-link"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 巴哈姆特 ACG 大賽 -->
+        <div class="award-tier mt-8">
+          <div class="award-tier-header">
+            <span class="tier-badge gamer-badge">巴哈姆特 ACG 創作大賽</span>
+            <h3 class="tier-title">臺灣指標性遊戲創作賽事</h3>
+          </div>
+
+          <div class="award-card gamer-card">
+            <div class="award-icon-box gamer-icon">
+              <i data-lucide="gamepad-2"></i>
+            </div>
+            <div class="award-body">
+              <div class="award-tag">SheenaGames 特別獎 · 2023</div>
+              <h4 class="award-title">《薩拉曼計畫》Project Salaman</h4>
+              <p class="award-desc">於 2023 巴哈姆特 ACG 創作大賽中展現優異的遊戲機制與美術沉浸感，獲頒 SheenaGames 特別獎。</p>
+              <a href="https://prj.gamer.com.tw/acgaward/2023/demo.php?t=3&sn=35" target="_blank" rel="noopener noreferrer" class="award-link">
+                <span>查看巴哈姆特賽事頁面</span>
+                <i data-lucide="external-link"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 放視大賞 Vision Get Wild -->
+        <div class="award-tier mt-8">
+          <div class="award-tier-header">
+            <span class="tier-badge vgw-badge">放視大賞 Vision Get Wild</span>
+            <h3 class="tier-title">全台大專院校數位設計最具指標賽事</h3>
+          </div>
+
+          <div class="vgw-list">
+            <div class="vgw-item">
+              <div class="vgw-year">2024</div>
+              <div class="vgw-info">
+                <span class="vgw-status">入圍</span>
+                <h4 class="vgw-title">《我要成為頂級冒險者》</h4>
+                <p class="vgw-team">學生團隊：林子揚、曾鈞鴻、楊凱、莊俊彥、黃筱瑄</p>
+              </div>
+            </div>
+
+            <div class="vgw-item">
+              <div class="vgw-year">2023</div>
+              <div class="vgw-info">
+                <span class="vgw-status">入圍</span>
+                <h4 class="vgw-title">《拼拼乓乓》PING PING PONG PONG</h4>
+                <p class="vgw-team">學生團隊：陳秋灧、余靜安、游采霓、鍾雨伶、林昀生、宋璟萱</p>
+              </div>
+            </div>
+
+            <div class="vgw-item">
+              <div class="vgw-year">2023</div>
+              <div class="vgw-info">
+                <span class="vgw-status">入圍</span>
+                <h4 class="vgw-title">《薩拉曼計畫》Project Salaman</h4>
+                <p class="vgw-team">學生團隊：曾博晨、張芳瑜、闕沁竹、廖幸瑜、林晉緯、于承翰</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 4: 研討會學術論文 (Research & Publications) -->
+    <section class="tab-content" id="tab-research">
+      <div class="glass-card section-card">
+        <div class="card-header">
+          <div class="card-icon"><i data-lucide="file-check"></i></div>
+          <div>
+            <h2 class="card-title">學術研討會論文發表</h2>
+            <p class="card-subtitle">專注於 CI/CD 自動化、數位雙生、XR 教具、雲端互動與電腦視覺技術</p>
+          </div>
+        </div>
+
+        <div class="paper-list">
+          <!-- 2025 -->
+          <div class="paper-item">
+            <div class="paper-year-badge">Nov 2025 · Accepted</div>
+            <h3 class="paper-title">基於 Jenkins 與 Git 的 Unity CI/CD 流程實作與效益評估：優化遊戲開發效率與品質</h3>
+            <p class="paper-authors">薛欣宜、<strong>吳柏瀧</strong>、黃冠瑋</p>
+            <p class="paper-conf">2025 第18屆 智慧x永續暨台灣數位媒體設計國際研討會</p>
+          </div>
+
+          <div class="paper-item">
+            <div class="paper-year-badge">Nov 2025 · Accepted</div>
+            <h3 class="paper-title">整合分組內容管理與 PC/VR 多平台呈現的互動式虛擬藝廊開發</h3>
+            <p class="paper-authors">汪憶蓁、<strong>吳柏瀧</strong>、彭慶東</p>
+            <p class="paper-conf">2025 第18屆 智慧x永續暨台灣數位媒體設計國際研討會</p>
+          </div>
+
+          <div class="paper-item">
+            <div class="paper-year-badge">Nov 2025</div>
+            <h3 class="paper-title">分割畫面派對遊戲《拉芙拉芙BASH！》之介面設計與評估</h3>
+            <p class="paper-authors">吳彥儀、<strong>吳柏瀧</strong></p>
+            <p class="paper-conf">2025 第18屆 智慧x永續暨台灣數位媒體設計國際研討會 (ISBN: 9786267673171)</p>
+          </div>
+
+          <!-- 2024 -->
+          <div class="paper-item">
+            <div class="paper-year-badge">Oct 2024</div>
+            <h3 class="paper-title">PANTONE膚色指南與個人基因膚色調性分析APP系統開發</h3>
+            <p class="paper-authors">黄咨斐、黃俊雄、<strong>吳柏瀧</strong></p>
+            <p class="paper-conf">2024 第17屆 台灣數位媒體設計學會國際研討會，pp. 311-321 (ISBN: 9789868425187)</p>
+          </div>
+
+          <div class="paper-item">
+            <div class="paper-year-badge">Oct 2024</div>
+            <h3 class="paper-title">基於雲端之虛擬博物館平台設計</h3>
+            <p class="paper-authors"><strong>吳柏瀧</strong>、黃俊雄、楊欣儒</p>
+            <p class="paper-conf">2024 第17屆 台灣數位媒體設計學會國際研討會，pp. 260-268 (ISBN: 9789868425187)</p>
+          </div>
+
+          <div class="paper-item">
+            <div class="paper-year-badge">Jun 2024</div>
+            <h3 class="paper-title">基於虛擬實境之版本控制教具設計</h3>
+            <p class="paper-authors"><strong>吳柏瀧</strong>、巫俊采、黃冠瑋、吳彥儀</p>
+            <p class="paper-conf">第十八屆智慧生活科技研討會 (ILT2024)，pp. 119-123 (ISBN: 9786264010139)</p>
+          </div>
+
+          <div class="paper-item">
+            <div class="paper-year-badge">Jun 2024</div>
+            <h3 class="paper-title">基於穿戴式擴增實境之物聯網教具設計</h3>
+            <p class="paper-authors"><strong>吳柏瀧</strong>、彭慶東、黃冠瑋、陳欣瑩</p>
+            <p class="paper-conf">第十八屆智慧生活科技研討會 (ILT2024)，pp. 133-137 (ISBN: 9786264010139)</p>
+          </div>
+
+          <!-- 2023 -->
+          <div class="paper-item">
+            <div class="paper-year-badge">Dec 2023</div>
+            <h3 class="paper-title">簡易型數位雙生之研究</h3>
+            <p class="paper-authors"><strong>吳柏瀧</strong>、彭慶東、黃冠瑋</p>
+            <p class="paper-conf">2023 第16屆 跨域設計產學暨台灣數位媒體設計國際研討會 (ISBN: 9786269789344)</p>
+          </div>
+
+          <div class="paper-item ei-highlight">
+            <div class="paper-year-badge ei-badge">Jun 2023 · IEEE EI 收錄</div>
+            <h3 class="paper-title">A Refractive Distortion Correction Method for 3D Root Reconstruction</h3>
+            <p class="paper-authors">Mu-Wei Li, <strong>Po-Lung Wu</strong>, Shuen-Fang Lo, Yung-Kuan Chan, Shyr-Shen Yu</p>
+            <p class="paper-conf">2023 Sixth International Symposium on Computer, Consumer and Control (IS3C), IEEE, pp. 114-117. DOI: 10.1109/IS3C57901.2023.00039</p>
+          </div>
+
+          <div class="paper-item">
+            <div class="paper-year-badge">Jun 2023</div>
+            <h3 class="paper-title">基於雲端服務之虛擬主持人設計與實作</h3>
+            <p class="paper-authors">廖偉智、<strong>吳柏瀧</strong>、黃冠瑋</p>
+            <p class="paper-conf">第十七屆智慧生活科技研討會，pp. 371-375 (ISBN: 9786263284487)</p>
+          </div>
+
+          <!-- 2021 & 2012 -->
+          <div class="paper-item">
+            <div class="paper-year-badge">Jun 2021</div>
+            <h3 class="paper-title">互動式浮空投影技術</h3>
+            <p class="paper-authors">吳栢融、彭慶東、楊欣儒 (<strong>吳柏瀧</strong>指導研究)</p>
+            <p class="paper-conf">2021 台灣數位媒體設計國際學術研討會，pp. 320-324 (ISBN: 978-986-95846-6-1)</p>
+          </div>
+
+          <div class="paper-item">
+            <div class="paper-year-badge">Jun 2012</div>
+            <h3 class="paper-title">The Low-Cost Interactive Tennis Training Platform</h3>
+            <p class="paper-authors">Hung-Kuang Chen, <strong>Po-Jung Wu</strong>, Yong-Cheng Chen</p>
+            <p class="paper-conf">第七屆智慧生活科技研討會 (ISBN: 978-957-21-8506-3)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 5: 評審委員與審稿服務 (Services) -->
+    <section class="tab-content" id="tab-services">
+      <div class="content-grid-2col">
+        <!-- 評審委員 -->
+        <div class="glass-card section-card">
+          <div class="card-header">
+            <div class="card-icon"><i data-lucide="scale"></i></div>
+            <div>
+              <h2 class="card-title">專業評審委員經歷</h2>
+              <p class="card-subtitle">受邀擔任國內指標遊戲大獎與高中學習歷程評審</p>
+            </div>
+          </div>
+
+          <div class="service-list">
+            <div class="service-item">
+              <div class="service-dot"></div>
+              <div>
+                <span class="service-badge">2026 年度</span>
+                <h3 class="service-name">Taipei Game Show Indie Game Award 評審委員</h3>
+                <p class="service-org">主辦單位：台北市電腦商業同業公會 (TCA)</p>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-dot"></div>
+              <div>
+                <span class="service-badge">2025 年度</span>
+                <h3 class="service-name">Taipei Game Show Indie Game Award 評審委員</h3>
+                <p class="service-org">主辦單位：台北市電腦商業同業公會 (TCA)</p>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-dot"></div>
+              <div>
+                <span class="service-badge">113 學年度</span>
+                <h3 class="service-name">學生學習歷程檔案分享會 評審委員</h3>
+                <p class="service-org">主辦學校：國立南投高級中學</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 審稿服務 Reviewer Services -->
+        <div class="glass-card section-card">
+          <div class="card-header">
+            <div class="card-icon"><i data-lucide="check-check"></i></div>
+            <div>
+              <h2 class="card-title">學術審稿服務 (Reviewer)</h2>
+              <p class="card-subtitle">受邀擔任國際研討會與學術年會同儕審查</p>
+            </div>
+          </div>
+
+          <div class="service-list">
+            <div class="service-item">
+              <div class="service-dot"></div>
+              <div>
+                <span class="service-badge">Conference Reviewer</span>
+                <h3 class="service-name">IS&DMD (智慧x永續暨台灣數位媒體設計國際研討會)</h3>
+                <p class="service-org">審查數位媒體、人機互動與沉浸式虛擬設計相關研究成果</p>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-dot"></div>
+              <div>
+                <span class="service-badge">Workshop Reviewer</span>
+                <h3 class="service-name">CGW (Computer Graphics Workshop 電腦圖學研討會)</h3>
+                <p class="service-org">審查電腦圖學渲染、三維建模與視覺幾何技術學術論文</p>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-dot"></div>
+              <div>
+                <span class="service-badge">Conference Reviewer</span>
+                <h3 class="service-name">ILT (Intelligent Living Technology 智慧生活科技研討會)</h3>
+                <p class="service-org">審查智慧物聯網、智慧家庭與互動式應用系統技術發表</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+      <div class="footer-content">
+        <span>© 吳柏瀧 Po-Lung Wu · Personal Digital Portfolio</span>
+        <span class="separator">•</span>
+        <span>嶺東科技大學 數位媒體設計系</span>
+        <span class="separator">•</span>
+        <span id="footer-utc">UTC: --:--:--</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
