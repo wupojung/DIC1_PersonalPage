@@ -148,7 +148,7 @@ body {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 1080px;
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -267,15 +267,15 @@ body {
    Hero Section
    ========================================================================== */
 .hero-section {
-  padding: 32px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 24px;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1fr auto;
   gap: 28px;
   align-items: center;
 }
@@ -284,13 +284,13 @@ body {
 .profile-summary {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 22px;
 }
 
 .avatar-container {
   position: relative;
-  width: 90px;
-  height: 90px;
+  width: 88px;
+  height: 88px;
   flex-shrink: 0;
 }
 
@@ -323,7 +323,7 @@ body {
 }
 
 .avatar-initials {
-  font-size: 1.75rem;
+  font-size: 1.7rem;
   font-weight: 800;
   letter-spacing: 0.04em;
   background: linear-gradient(135deg, #ffffff 40%, #a5b4fc 100%);
@@ -347,7 +347,7 @@ body {
 .profile-details {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
 }
 
 .greeting-box {
@@ -381,14 +381,14 @@ body {
 }
 
 .name-en {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--text-secondary);
   font-family: var(--font-main);
 }
 
 .hero-title {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.5;
 }
@@ -397,7 +397,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
 .chip-link {
@@ -427,41 +427,54 @@ body {
   color: var(--accent-indigo);
 }
 
-/* Real-Time Clock Box */
+/* ==========================================================================
+   Real-Time Clock Box (Generous Width, No-Wrap Time Digits)
+   ========================================================================== */
 .hero-clock-box {
   background: rgba(0, 0, 0, 0.28);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: var(--radius-md);
-  padding: 22px 20px;
+  padding: 16px 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
+  min-width: 350px; /* Ample width prevents wrapping */
+  width: auto;
+  box-sizing: border-box;
 }
 
 .time-readout {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
   gap: 10px;
+  width: 100%;
+  white-space: nowrap; /* PREVENTS WRAPPING */
+  flex-wrap: nowrap;
 }
 
 .time-digits {
+  display: inline-flex;
+  align-items: baseline;
   font-family: var(--font-mono);
-  font-size: 3.2rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
   line-height: 1;
+  white-space: nowrap; /* PREVENTS WRAPPING */
+  flex-shrink: 0;
   background: var(--time-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 4px 16px rgba(99, 102, 241, 0.3));
+  filter: drop-shadow(0 2px 10px rgba(99, 102, 241, 0.25));
 }
 
 .time-separator {
   animation: blinkColon 1s ease infinite;
   display: inline-block;
   opacity: 0.85;
+  margin: 0 1px;
 }
 
 @keyframes blinkColon {
@@ -473,18 +486,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
+  flex-shrink: 0;
 }
 
 .period-indicator {
   font-family: var(--font-mono);
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   font-weight: 700;
   color: var(--accent-cyan);
   background: rgba(56, 189, 248, 0.12);
   border: 1px solid rgba(56, 189, 248, 0.25);
-  padding: 2px 7px;
-  border-radius: 5px;
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 
 .period-indicator.hidden {
@@ -492,8 +506,9 @@ body {
 }
 
 .seconds-progress-ring {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .circular-chart {
@@ -518,22 +533,26 @@ body {
 
 .date-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  align-items: center;
   justify-content: center;
   gap: 8px;
+  width: 100%;
+  white-space: nowrap;
 }
 
 .date-pill {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.82rem;
+  font-size: 0.76rem;
   font-weight: 500;
   color: var(--text-secondary);
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.06);
   padding: 4px 12px;
   border-radius: 9999px;
+  white-space: nowrap;
 }
 
 .date-pill svg {
@@ -557,16 +576,17 @@ body {
 
 .metric-label {
   display: block;
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   color: var(--text-muted);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
 }
 
 .metric-val {
   display: block;
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--text-primary);
+  white-space: nowrap;
 }
 
 /* Stats Counter Strip */
@@ -1353,6 +1373,13 @@ body {
     gap: 24px;
   }
 
+  .hero-clock-box {
+    width: 100%;
+    min-width: unset;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
   .content-grid-2col {
     grid-template-columns: 1fr;
   }
@@ -1388,8 +1415,16 @@ body {
     justify-content: center;
   }
 
+  .hero-clock-box {
+    width: 100%;
+    min-width: unset;
+    max-width: 360px;
+    padding: 14px 16px;
+    margin: 0 auto;
+  }
+
   .time-digits {
-    font-size: 2.6rem;
+    font-size: 2.1rem;
   }
 
   .stats-counter-strip {
