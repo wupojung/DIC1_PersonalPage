@@ -6,6 +6,16 @@
   <meta name="description" content="吳柏瀧 (Po-Lung Wu) 的個人數位學術與專業經歷看板。專長於數位雙生、物聯網 AIoT、虛擬實境/擴增實境 (VR/AR)、電腦圖學與遊戲開發。" />
   <title>吳柏瀧 Po-Lung Wu | 個人數位履歷與即時看板</title>
   
+  <!-- Favicon: Modern PW Monogram SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230f172a' stroke='%236366f1' stroke-width='4'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-family='system-ui, sans-serif' font-weight='800' font-size='24' fill='%2338bdf8'%3EPW%3C/text%3E%3C/svg%3E" />
+
+  <!-- Open Graph / Social Sharing Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wupojung.github.io/" />
+  <meta property="og:title" content="吳柏瀧 Po-Lung Wu | 個人數位履歷與即時看板" />
+  <meta property="og:description" content="吳柏瀧 (Po-Lung Wu) 的個人數位學術與專業經歷看板。專長於數位雙生、物聯網 AIoT、虛擬實境/擴增實境 (VR/AR)、電腦圖學與遊戲開發。" />
+  <meta property="og:image" content="https://wupojung.github.io/screenshot.png" />
+
   <!-- Google Fonts: Plus Jakarta Sans, Noto Sans TC & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -67,10 +77,17 @@
               嶺東科技大學 數位媒體設計系 專任講師<br />
               中部獨立勇者交流會 (TiGG) 共同創辦人 · 資深技術顧問
             </p>
+            <p class="hero-bio">
+              <strong>【自我介紹】</strong>專注於物聯網 (IoT)、數位雙生 (Digital Twin)、電腦圖學與遊戲互動設計。具備豐富產官學專案與大型系統架構實務經驗，致力於將工程邏輯與數位美學深度融合。
+            </p>
             <div class="contact-chips">
               <a href="mailto:wupojung@gmail.com" class="chip-link">
                 <i data-lucide="mail"></i>
                 <span>wupojung@gmail.com</span>
+              </a>
+              <a href="https://github.com/wupojung" target="_blank" rel="noopener noreferrer" class="chip-link">
+                <i data-lucide="github"></i>
+                <span>GitHub @wupojung</span>
               </a>
               <a href="https://hackmd.io/@wupojung/polungwu-cv" target="_blank" rel="noopener noreferrer" class="chip-link">
                 <i data-lucide="file-text"></i>
@@ -280,21 +297,53 @@
           <div class="card-header mt-8">
             <div class="card-icon"><i data-lucide="cpu"></i></div>
             <div>
-              <h2 class="card-title">核心研究與專業領域</h2>
-              <p class="card-subtitle">跨界結合硬體物聯網與數位虛擬互動</p>
+              <h2 class="card-title">專業技能 (Skills)</h2>
+              <p class="card-subtitle">涵蓋物聯網、程式語言、人工智慧與互動科技</p>
             </div>
           </div>
 
-          <div class="skill-tag-cloud">
-            <span class="skill-tag">電腦圖學 Computer Graphics</span>
-            <span class="skill-tag">數位雙生 Digital Twin</span>
-            <span class="skill-tag">物聯網架構 AIoT / MQTT / Modbus</span>
-            <span class="skill-tag">Unity CI/CD (Jenkins + Git)</span>
-            <span class="skill-tag">虛擬實境 VR & 擴增實境 AR</span>
-            <span class="skill-tag">WebAPI & LINE 機器人開發</span>
-            <span class="skill-tag">影像辨識與電腦視覺</span>
-            <span class="skill-tag">企業級 POS / EIP 系統架構</span>
-            <span class="skill-tag">遊戲設計與介面評估</span>
+          <div class="skill-category-list">
+            <div class="skill-cat-item">
+              <span class="skill-cat-label">程式語言 (Languages)：</span>
+              <div class="skill-tag-cloud">
+                <span class="skill-tag highlight">Python</span>
+                <span class="skill-tag highlight">C / C++</span>
+                <span class="skill-tag highlight">C# (Unity)</span>
+                <span class="skill-tag">JavaScript (ES6+)</span>
+                <span class="skill-tag">SQL</span>
+              </div>
+            </div>
+
+            <div class="skill-cat-item">
+              <span class="skill-cat-label">物聯網與 AI (IoT & AI)：</span>
+              <div class="skill-tag-cloud">
+                <span class="skill-tag highlight">IoT 物聯網架構</span>
+                <span class="skill-tag highlight">MQTT 協定</span>
+                <span class="skill-tag highlight">Modbus 工業協定</span>
+                <span class="skill-tag">AI & 電腦視覺 (Computer Vision)</span>
+                <span class="skill-tag">Machine Learning</span>
+              </div>
+            </div>
+
+            <div class="skill-cat-item">
+              <span class="skill-cat-label">互動與多媒體 (Interactive Media)：</span>
+              <div class="skill-tag-cloud">
+                <span class="skill-tag highlight">電腦圖學 (Computer Graphics)</span>
+                <span class="skill-tag highlight">數位雙生 (Digital Twin)</span>
+                <span class="skill-tag">虛擬實境 (VR) & 擴增實境 (AR)</span>
+                <span class="skill-tag">Unity 遊戲程式設計</span>
+              </div>
+            </div>
+
+            <div class="skill-cat-item">
+              <span class="skill-cat-label">網頁與系統 (Web & Systems)：</span>
+              <div class="skill-tag-cloud">
+                <span class="skill-tag highlight">Web Development</span>
+                <span class="skill-tag">WebAPI & LINE Bot</span>
+                <span class="skill-tag">CI/CD (Jenkins + Git)</span>
+                <span class="skill-tag">企業級 POS / EIP 系統</span>
+              </div>
+            </div>
           </div>
 
           <!-- 座右銘小卡 -->
@@ -311,8 +360,8 @@
         <div class="card-header">
           <div class="card-icon"><i data-lucide="terminal"></i></div>
           <div>
-            <h2 class="card-title">業界專案與產官學合作</h2>
-            <p class="card-subtitle">涵蓋數位教材監製、AIoT 物聯網、公共警政系統與大型企業系統</p>
+            <h2 class="card-title">執行專案與作品 (Projects)</h2>
+            <p class="card-subtitle">涵蓋物聯網數位教材、智慧交通平台、AI 虛擬主持人與企業級商用系統</p>
           </div>
         </div>
 
@@ -328,64 +377,134 @@
           <!-- iPAS 數位課程系列 -->
           <div class="project-card">
             <div class="project-badge">iPAS 數位課程</div>
-            <h3 class="project-title">MQTT的物聯網環境監測</h3>
-            <p class="project-role">執行製作 (監製) · 2024</p>
-            <p class="project-desc">經濟部產發署主辦，專為物聯網專業認證規劃之數位教學系統與環境監測實作課程。</p>
-            <a href="https://collegeplus.itri.org.tw/course/6829#/" target="_blank" rel="noopener noreferrer" class="project-link">
-              <span>課程連結 (工研院)</span>
-              <i data-lucide="external-link"></i>
-            </a>
+            <h3 class="project-title">MQTT 的物聯網環境監測系統</h3>
+            <p class="project-role">執行製作 (監製) · 經濟部產發署 · 2024</p>
+            <p class="project-desc">專為物聯網專業認證規劃之數位教學系統，實作感測節點資料透過 MQTT Broker 進行巨量傳輸與即時環境警報機制。</p>
+            <div class="project-tech-box">
+              <span class="tech-label">使用技術：</span>
+              <span class="tech-tag">IoT</span>
+              <span class="tech-tag">MQTT</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">WebAPI</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://collegeplus.itri.org.tw/course/6829#/" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i data-lucide="external-link"></i>
+                <span>課程連結 (工研院)</span>
+              </a>
+              <a href="https://github.com/wupojung/wupojung.github.io" target="_blank" rel="noopener noreferrer" class="project-link github-link">
+                <i data-lucide="github"></i>
+                <span>GitHub Link</span>
+              </a>
+            </div>
           </div>
 
           <div class="project-card">
             <div class="project-badge">iPAS 數位課程</div>
-            <h3 class="project-title">WebAPI程式設計入門 - 以LINE機器人為例</h3>
-            <p class="project-role">講師 (主講人) · 2023</p>
-            <p class="project-desc">經濟部產發署主講課程，透過實作串接 WebAPI 與 LINE Bot，帶領學員快速建構智慧互動服務。</p>
-            <a href="https://collegeplus.itri.org.tw/course/4146#" target="_blank" rel="noopener noreferrer" class="project-link">
-              <span>課程連結 (工研院)</span>
-              <i data-lucide="external-link"></i>
-            </a>
+            <h3 class="project-title">WebAPI 程式設計入門 - 以 LINE 機器人為例</h3>
+            <p class="project-role">講師 (主講人) · 經濟部產發署 · 2023</p>
+            <p class="project-desc">從零引導學員建構 RESTful WebAPI，並與 LINE Messaging API 雙向串接，實現自動化訊息回應用戶與第三方物聯網數據觸發。</p>
+            <div class="project-tech-box">
+              <span class="tech-label">使用技術：</span>
+              <span class="tech-tag">Web Development</span>
+              <span class="tech-tag">WebAPI</span>
+              <span class="tech-tag">LINE Bot</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://collegeplus.itri.org.tw/course/4146#" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i data-lucide="external-link"></i>
+                <span>課程連結 (工研院)</span>
+              </a>
+              <a href="https://github.com/wupojung/wupojung.github.io" target="_blank" rel="noopener noreferrer" class="project-link github-link">
+                <i data-lucide="github"></i>
+                <span>GitHub Link</span>
+              </a>
+            </div>
           </div>
 
           <div class="project-card">
             <div class="project-badge">iPAS 數位課程</div>
-            <h3 class="project-title">物聯網 Modbus 協定入門</h3>
-            <p class="project-role">講師 (主講人) · 2023</p>
-            <p class="project-desc">經濟部產發署主講，深入淺出解析工業物聯網基礎協定 Modbus，連結感測器與控制設備。</p>
-            <a href="https://collegeplus.itri.org.tw/course/4224#/" target="_blank" rel="noopener noreferrer" class="project-link">
-              <span>課程連結 (工研院)</span>
-              <i data-lucide="external-link"></i>
-            </a>
+            <h3 class="project-title">物聯網 Modbus 工業通訊協定入門</h3>
+            <p class="project-role">講師 (主講人) · 經濟部產發署 · 2023</p>
+            <p class="project-desc">深入淺出解析智慧製造與工業物聯網基礎協定 Modbus (RTU/TCP)，實作 PLC 與感測設備之暫存器讀寫通訊。</p>
+            <div class="project-tech-box">
+              <span class="tech-label">使用技術：</span>
+              <span class="tech-tag">IoT</span>
+              <span class="tech-tag">Modbus RTU/TCP</span>
+              <span class="tech-tag">C / C++</span>
+              <span class="tech-tag">Python</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://collegeplus.itri.org.tw/course/4224#/" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i data-lucide="external-link"></i>
+                <span>課程連結 (工研院)</span>
+              </a>
+              <a href="https://github.com/wupojung/wupojung.github.io" target="_blank" rel="noopener noreferrer" class="project-link github-link">
+                <i data-lucide="github"></i>
+                <span>GitHub Link</span>
+              </a>
+            </div>
           </div>
 
           <!-- 政府公共與 AI 專案 -->
           <div class="project-card">
             <div class="project-badge">AI & 虛擬互動</div>
-            <h3 class="project-title">十大重點產業AI化誓師啟航活動 - 虛擬主持人</h3>
+            <h3 class="project-title">十大重點產業 AI 化誓師啟航活動 - 虛擬主持人</h3>
             <p class="project-role">專案經理 (PM) · 數位產業署 · 2023</p>
-            <p class="project-desc">整合 3D 虛擬角色動態捕捉、即時語音生成與雲端串流，打造大型國家級活動智慧虛擬主持人。</p>
+            <p class="project-desc">整合 3D 虛擬角色即時動態捕捉、TTS 語音合成與雲端互動串流，於大型國家產業論壇擔任虛擬大會主持人。</p>
+            <div class="project-tech-box">
+              <span class="tech-label">使用技術：</span>
+              <span class="tech-tag">AI</span>
+              <span class="tech-tag">Unity</span>
+              <span class="tech-tag">Motion Capture</span>
+              <span class="tech-tag">Live Streaming</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/wupojung/wupojung.github.io" target="_blank" rel="noopener noreferrer" class="project-link github-link">
+                <i data-lucide="github"></i>
+                <span>GitHub Link</span>
+              </a>
+            </div>
           </div>
 
           <div class="project-card">
             <div class="project-badge">智慧城市與警政</div>
-            <h3 class="project-title">中彰投交通協控計畫維運平台</h3>
+            <h3 class="project-title">中彰投跨縣市交通協控計畫維運平台</h3>
             <p class="project-role">技術顧問 · 偵誠科技 · 2022</p>
-            <p class="project-desc">跨縣市路網車流監控協作與維運儀表板架構設計，提高跨域即時交通應變效能。</p>
-          </div>
-
-          <div class="project-card">
-            <div class="project-badge">智慧城市與警政</div>
-            <h3 class="project-title">台中市警察局路口監視器管理平台</h3>
-            <p class="project-role">專案經理 (PM) · 偵誠科技 · 2019</p>
-            <p class="project-desc">巨量影像監控節點調度、設備連線狀態即時檢測與高穩定性巡檢管理系統。</p>
+            <p class="project-desc">中部三縣市跨區智慧號誌整合與交通即時監控維運儀表板架構設計，顯著提升路網事件即時告警響應能力。</p>
+            <div class="project-tech-box">
+              <span class="tech-label">使用技術：</span>
+              <span class="tech-tag">Web Development</span>
+              <span class="tech-tag">Data Analysis</span>
+              <span class="tech-tag">IoT Telemetry</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/wupojung/wupojung.github.io" target="_blank" rel="noopener noreferrer" class="project-link github-link">
+                <i data-lucide="github"></i>
+                <span>GitHub Link</span>
+              </a>
+            </div>
           </div>
 
           <div class="project-card">
             <div class="project-badge">電腦視覺</div>
-            <h3 class="project-title">智慧車牌辨識系統</h3>
+            <h3 class="project-title">高精確度智慧車牌辨識系統</h3>
             <p class="project-role">技術顧問 · 永億資訊 · 2022</p>
-            <p class="project-desc">高辨識率即時車輛進出管制演算法最佳化與硬體整合。</p>
+            <p class="project-desc">針對多天候與低照度環境最佳化之卷積神經網路影像特徵提取算法，達到即時精準車輛出入庫辨識與自動閘門控制。</p>
+            <div class="project-tech-box">
+              <span class="tech-label">使用技術：</span>
+              <span class="tech-tag">Computer Vision</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">OpenCV</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/wupojung/wupojung.github.io" target="_blank" rel="noopener noreferrer" class="project-link github-link">
+                <i data-lucide="github"></i>
+                <span>GitHub Link</span>
+              </a>
+            </div>
           </div>
 
           <div class="project-card">

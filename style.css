@@ -393,6 +393,21 @@ body {
   line-height: 1.5;
 }
 
+.hero-bio {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 2px solid var(--accent-cyan);
+  padding: 6px 12px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin: 4px 0;
+}
+
+.hero-bio strong {
+  color: var(--accent-cyan);
+}
+
 .contact-chips {
   display: flex;
   flex-wrap: wrap;
@@ -873,6 +888,30 @@ body {
   color: #ffffff;
 }
 
+.skill-tag.highlight {
+  border-color: rgba(99, 102, 241, 0.45);
+  background: rgba(99, 102, 241, 0.14);
+  color: #c7d2fe;
+}
+
+.skill-category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.skill-cat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skill-cat-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
 .quote-container {
   padding: 14px 18px;
   background: rgba(255, 255, 255, 0.02);
@@ -979,8 +1018,41 @@ body {
   flex-grow: 1;
 }
 
+.project-tech-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  padding: 6px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tech-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.tech-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--accent-cyan);
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
 .project-link {
-  align-self: flex-start;
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -988,12 +1060,25 @@ body {
   font-weight: 600;
   color: var(--accent-cyan);
   text-decoration: none;
-  margin-top: 8px;
   transition: var(--transition-smooth);
 }
 
 .project-link:hover {
   color: #ffffff;
+}
+
+.project-link.github-link {
+  color: var(--text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+.project-link.github-link:hover {
+  color: var(--text-bright);
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .project-link svg {
