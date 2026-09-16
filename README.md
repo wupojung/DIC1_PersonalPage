@@ -1,110 +1,149 @@
-# 吳柏瀧 Po-Lung Wu | 個人數位履歷與即時儀表板
+# Po-Lung Wu (吳柏瀧) | Personal Portfolio & Live Dashboard
 
-> 📌 **課堂作業 (Assignment):** DIC 1 (Do In Class 1)  
-> 👤 **學生 / 作者 (Author):** 吳柏瀧 (Po-Lung Wu)  
-> 🌐 **線上正式展示 (Live Demo):** [https://wupojung.github.io/](https://wupojung.github.io/)  
-> 📦 **原始碼儲存庫 (Repository):** [https://github.com/wupojung/wupojung.github.io](https://github.com/wupojung/wupojung.github.io)  
-> 📄 **資料來源 (HackMD CV):** [https://hackmd.io/@wupojung/polungwu-cv](https://hackmd.io/@wupojung/polungwu-cv)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-DIC1__PersonalPage-blue?style=flat-square&logo=github)](https://github.com/wupojung/DIC1_PersonalPage)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
+
+> 🔗 **Live Demo:** [https://github.com/wupojung/DIC1_PersonalPage](https://github.com/wupojung/DIC1_PersonalPage)
+
+A modern, high-performance personal digital station and portfolio for **Po-Lung Wu (吳柏瀧)** — Ph.D. Student at Dept. of Computer Science & Engineering, National Chung Hsing University (NCHU CSE), Co-founder of TiGG (Taiwan Indie Game Group), and Senior Technical Consultant in AIoT, Digital Twins, and Computer Graphics.
 
 ---
 
-## 📸 作業成果預覽 (Preview Screenshot)
+## 📸 Preview
 
 ![Po-Lung Wu Portfolio Screenshot](./screenshot.png)
 
 ---
 
-## 📋 老師評分項目達成對照 (Requirements Checklist)
+## 🌟 Overview
 
-本專案完全對照老師公布之 **DIC 1 (Do In Class 1) 5 項基礎要求** 進行規格化建構：
+This project is a lightweight, zero-dependency personal portal built entirely with vanilla web technologies. It seamlessly integrates a real-time live clock engine, dynamic ambient greeting logic, and an interactive categorized showcase of academic publications, industry consulting projects, mentorship awards (including two Red Dot Design Award winners), and professional review services.
 
-| 評分項目 (Requirements) | 作業達成內容與實作位置 (Implementation Details) | 達成狀態 |
-| :--- | :--- | :---: |
-| **👤 1. Profile (個人資訊)**<br>• 姓名<br>• 個人照片或 Avatar<br>• 科系 / 專長<br>• 簡短自我介紹 | • **姓名**：吳柏瀧 (Po-Lung Wu)<br>• **Avatar**：專屬高科技立體「PW」Monogram 徽章與動態極光光環（遵循隱私保護不放個人照片）<br>• **科系與專長**：嶺東科技大學 數位媒體設計系 專任講師 · 國立勤益科技大學 電子工程所碩士<br>• **簡短自我介紹**：首頁顯著展示自介，說明個人專注於 IoT、數位雙生、電腦圖學與大型系統架構實務經驗 | ✅ 100% 達成 |
-| **🛠 2. Skills (專業技能)**<br>• 至少列出 3 項技能<br>• 例如：Python, C/C++, IoT, Web, AI | • **程式語言**：`Python`, `C / C++`, `C# (Unity)`, `JavaScript (ES6+)`, `SQL`<br>• **物聯網與 AI**：`IoT (MQTT / Modbus)`, `AI & 電腦視覺 (Computer Vision)`, `Machine Learning`<br>• **多媒體與互動**：`電腦圖學 (Computer Graphics)`, `數位雙生 (Digital Twin)`, `VR / AR`, `Unity 遊戲開發`<br>• **網頁與系統**：`Web Development`, `WebAPI & LINE Bot`, `CI/CD (Jenkins + Git)` | ✅ 超額達成<br>(15+ 項專業技能) |
-| **🚀 3. Projects (作品與專案)**<br>• 至少介紹 1 個作品或專案<br>• 包含專案名稱、描述、使用技術、GitHub Link | • **MQTT 物聯網環境監測系統**：使用技術 `Python`, `MQTT`, `IoT`, `WebAPI`（附工研院課程與 GitHub 連結）<br>• **WebAPI 與 LINE 機器人開發**：使用技術 `JavaScript`, `RESTful WebAPI`, `LINE Bot`<br>• **Modbus 工業物聯網協定入門**：使用技術 `C / C++`, `Python`, `Modbus RTU/TCP`<br>• **十大重點產業 AI 虛擬主持人**：使用技術 `Unity`, `AI`, `Motion Capture`<br>• **中彰投智慧交通維運平台** & **智慧車牌辨識系統**：使用技術 `Python`, `OpenCV`, `C++`<br>• 每個專案卡片均具備完整的【專案名稱】、【專案說明】、【使用技術標籤】與【GitHub Link】 | ✅ 超額達成<br>(收錄 6+ 個核心作品) |
-| **🕐 4. Live Clock (即時時鐘)**<br>• 使用 JavaScript 製作<br>• 至少顯示 HH : MM : SS<br>• 時間必須自動更新 | • 原生 JavaScript (`setInterval`) 秒級高精度自動更新<br>• 醒目呈現數位時鐘 `HH : MM : SS`，具備外圈秒數動態進度環<br>• 支援 `12H (AM/PM)` 與 `24H` 格式一鍵即時切換<br>• 整合時段階段動態問候（早安/午安/傍晚好/夜深了）、台灣在地化日期、時區（GMT+8）與年度累積進度 | ✅ 100% 達成 |
-| **🎨 5. Personal Design (自訂風格)**<br>• 非直接複製老師網頁<br>• 利用 Antigravity 與 AI 修改風格<br>• 顏色、字型、背景、佈局、卡片、動畫、主題 | • **視覺美學**：精緻毛玻璃 (Glassmorphism) 深色模式，搭配後方漂浮動態極光漸層光球 (CSS Keyframes Animation)<br>• **精選字型**：Google Fonts 之 `Plus Jakarta Sans`、`Noto Sans TC` 與數位時鐘專用 `JetBrains Mono`<br>• **卡片與佈局**：主儀表板 + 五大分類頁籤（經歷學歷、作品專案、紅點獲獎、12篇論文、評審審稿）<br>• **多主題配色**：極光紫藍 (Aurora)、曜石黑綠 (Midnight)、賽博夕陽 (Cyber) 隨心切換<br>• **抗折行防護**：時間容器經過嚴格 `white-space: nowrap` 與 RWD 響應式優化，各解析度下皆維持優雅單行 | ✅ 100% 達成 |
-
----
-
-## 🧭 功能結構導覽 (Interactive Architecture)
-
-```
-├── 頂部功能列 (Top Navigation)
-│   ├── 系統身分狀態燈 (嶺東科大 數位媒體設計系 · 專任講師)
-│   ├── 12H / 24H 時間格式一鍵切換鈕
-│   └── 3 款主題配色輪播切換鈕 (Aurora / Midnight / Cyber)
-├── 主儀表板 (Hero Dashboard)
-│   ├── 左側 Profile：PW 科技頭像、動態時段問候、姓名、簡短自我介紹、Email、GitHub、HackMD
-│   ├── 右側 Live Clock：充足寬度即時時鐘 (HH:MM:SS)、秒數進度環、在地化日期、時區、天數進度
-│   └── 數據條：德國紅點獲獎 2+、論文 12+、產學專案 10+、企業顧問 9+
-└── 五大分類頁籤 (Interactive Tabs)
-    ├── 💼 經歷與學歷：任教經歷、TiGG 創辦、業界顧問時間軸、勤益科大電子所碩士與學士背景
-    ├── 🛠️ 執行專案與產學：經濟部計畫(84萬)、3門 iPAS 數位課程、智慧交通警政與王品商用系統 (附使用技術與 GitHub Link)
-    ├── 🏆 指導學生獲獎：德國紅點設計獎 2 項 Winner、巴哈姆特 ACG 特別獎、放視大賞入圍
-    ├── 📚 學術研討會論文：12 篇學術論文 (Unity CI/CD、虛擬藝廊、XR教具、數位雙生、IEEE IS3C EI 收錄)
-    └── ⚖️ 評審與審稿服務：Taipei Game Show Indie Game Award 評審委員、研討會審稿人 (Reviewer)
-```
+### Key Highlights
+- **Zero Framework Overhead**: Built with pure HTML5, vanilla CSS3, and ES6+ JavaScript for instant loading and optimal performance.
+- **Privacy-First Identity**: Features a custom high-tech "PW" monogram badge with iridescent glowing rings in place of personal photos.
+- **Glassmorphism & Micro-Animations**: Tailored dark-mode UI with floating aurora mesh gradients, smooth tab transitions, and responsive cards.
+- **Live Clock Station**: High-precision ticking clock (`HH:MM:SS`) with a 12H/24H format toggle, circular seconds indicator, dynamic day-phase greetings, full localized date, and year progress tracking.
+- **Multi-Theme Support**: Instant client-side palette switching between **Aurora Glass**, **Midnight Obsidian**, and **Cyber Sunset**.
 
 ---
 
-## 🛠️ 技術架構說明 (Tech Stack)
+## ✨ Features & Architecture
 
-| 類別 | 使用技術 | 特點說明 |
+### 1. Live Clock & Temporal Telemetry
+- **Millisecond-Synced Clock**: Real-time `HH:MM:SS` display powered by a non-blocking JavaScript interval.
+- **12H / 24H Toggle**: Instant format switching with state saved to `localStorage`.
+- **Dynamic Day Phase & Greeting**: Context-aware greetings (Morning, Afternoon, Evening, Night) dynamically updated based on local time.
+- **Temporal Metrics**: Displays local date (Traditional Chinese format), timezone offset (`GMT+8`), day-of-year counter, and year completion percentage.
+- **Anti-Wrap Layout**: Robust `white-space: nowrap` design ensuring the time readout never breaks across lines on any screen resolution.
+
+### 2. Structured Portfolio Navigation
+The interface is structured into five accessible, interactive tabbed modules:
+- 💼 **Experience & Education (經歷與學歷)**
+  - Current Status: Ph.D. Student at Dept. of Computer Science & Engineering, National Chung Hsing University (NCHU CSE).
+  - Education: Ph.D. Program in Computer Science (National Chung Hsing University, ongoing); M.S. (Computer Graphics) & B.S. (Image Processing) from National Chin-Yi University of Technology.
+  - Academic & Teaching: University lecturing experience in interactive multimedia, game programming, and hardware-software systems.
+  - Community: Co-founder of Taiwan Indie Game Group (TiGG).
+  - Industry Consulting: Technical Director / Consultant at Jincheng Tech, Force Corp, Yongyi Info, and FirstEd International; former POS Team Project Lead at Wowprime Group.
+- 🛠️ **Projects & Industry Applications (執行專案與產學)**
+  - MOEA Industry Innovation Project (Co-PI, NT$840,000 grant).
+  - iPAS Certified Digital Courses: *IoT Environmental Monitoring with MQTT*, *WebAPI & LINE Bot Development*, and *Industrial Modbus Protocols*.
+  - Public Sector & AI Systems: Central Taiwan Traffic Coordination Platform, Taichung Police Surveillance Management System, Smart License Plate Recognition, and National Forum AI Virtual Host.
+  - Commercial Systems: Wowprime 12Hotpot App, Queue Management System, POS Core, and Corporate Mobile EIP.
+- 🏆 **Mentorship & Honors (指導學生獲獎紀錄)**
+  - **Red Dot Design Award Winner (2023)**: *PING PING PONG PONG (拼拼乓乓)* & *Project Salaman (薩拉曼計畫)*.
+  - **Bahamut ACG Creation Award (2023)**: SheenaGames Special Award (*Project Salaman*).
+  - **Vision Get Wild (放視大賞)**: Finalist in 2024 (*I Want to Be a Top Adventurer*) & 2023 (*PING PING PONG PONG*, *Project Salaman*).
+- 📚 **Academic Research & Publications (學術論文發表)**
+  - 12 conference papers covering Unity CI/CD automation, PC/VR virtual art galleries, party game UI evaluation, Pantone skin tone analysis, cloud-based virtual museums, and wearable AR IoT tools.
+  - **IEEE IS3C (EI Indexed)**: *A Refractive Distortion Correction Method for 3D Root Reconstruction*.
+- ⚖️ **Professional Service & Reviewing (評審與審稿服務)**
+  - Judge: Taipei Game Show Indie Game Award (2025, 2026) — Taipei Computer Association (TCA).
+  - Conference Reviewer: IS&DMD, Computer Graphics Workshop (CGW), and Intelligent Living Technology (ILT).
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology | Description |
 | :--- | :--- | :--- |
-| **網頁結構** | HTML5 | 完整語義化標籤（`<header>`, `<main>`, `<section>`, `<nav>`, `<footer>`）與無障礙設計 |
-| **視覺樣式** | Vanilla CSS3 | CSS 自訂屬性變數、Glassmorphism 毛玻璃質感、Keyframes 漂浮光球動態、Flexbox & CSS Grid |
-| **邏輯控制** | Vanilla JavaScript | 原生 `setInterval` 即時時鐘運算、時區推算、LocalStorage 本地偏好記憶、頁籤互動切換 |
-| **字體排印** | Google Fonts | Plus Jakarta Sans、Noto Sans TC、JetBrains Mono |
-| **向量圖示** | Lucide Icons | 輕量高質感 SVG 向量圖示庫 |
-| **外觀圖示** | Inline SVG Favicon | 專屬客製化「PW」微型分頁圖示 |
+| **Markup** | HTML5 | Semantic markup, Open Graph tags, accessibility attributes |
+| **Styling** | Vanilla CSS3 | Custom properties (CSS variables), Glassmorphism, CSS Grid, Flexbox, Keyframes |
+| **Scripting** | Vanilla JavaScript (ES6+) | Non-blocking clock engine, DOM manipulation, LocalStorage state persistence |
+| **Typography** | Google Fonts | `Plus Jakarta Sans`, `Noto Sans TC`, `JetBrains Mono` |
+| **Icons** | Lucide Icons | Modern lightweight SVG icon library |
+| **Favicon** | Inline SVG | Custom high-resolution vector favicon |
 
 ---
 
-## 💻 本地執行指南 (Local Development)
+## 📁 Repository Structure
 
-本專案為零依賴純前端靜態站點，可透過任何方式直接開啟：
+```
+├── index.html        # Semantic single-page application markup & metadata
+├── style.css         # Complete design system, theme definitions & animations
+├── script.js         # Clock engine, tab switcher, theme persistence & handlers
+├── screenshot.png    # High-resolution application preview screenshot
+└── README.md         # Professional project documentation
+```
 
-### 方式 1：直接開啟
-直接雙擊 [index.html](file:///d:/8115056006/aiot/index.html) 即可於任一瀏覽器（Chrome, Edge, Safari, Firefox）瀏覽。
+---
 
-### 方式 2：使用 Python 內建輕量 HTTP 伺服器
+## 🚀 Getting Started
+
+Since this project has zero build steps or package dependencies, you can run it immediately in any modern web browser.
+
+### Option 1: Direct File Access
+Simply double-click `index.html` or open it in your browser of choice (Chrome, Edge, Firefox, Safari).
+
+### Option 2: Lightweight Python Server
 ```bash
-# 在專案目錄下執行
+# Clone the repository
+git clone https://github.com/wupojung/DIC1_PersonalPage.git
+cd DIC1_PersonalPage
+
+# Start a local HTTP server
 python -m http.server 5173
 ```
-在瀏覽器網址列輸入：`http://localhost:5173`。
+Navigate to [http://localhost:5173](http://localhost:5173) in your browser.
 
-### 方式 3：使用 Node.js / npx
+### Option 3: Node.js / npx
 ```bash
 npx serve .
 ```
 
 ---
 
-## 🚀 GitHub Pages 部署流程 (Deployment)
+## 🌐 Deployment (GitHub Pages)
 
-1. **提交並推送變更至 GitHub**：
+This repository is configured for direct deployment via GitHub Pages:
+
+1. Push your code to the `main` branch of your repository:
    ```bash
    git add .
-   git commit -m "feat: complete DIC 1 assignment deliverable strictly matching rubric"
+   git commit -m "feat: release personal portfolio portal"
    git push origin main
    ```
-2. **開啟 GitHub Pages 服務**：
-   - 進入 GitHub 儲存庫 `wupojung/wupojung.github.io` 的 **Settings** -> **Pages**。
-   - 在 **Build and deployment** 下的 **Branch** 選擇 `main` 分支、資料夾選擇 `/ (root)`，點擊 **Save**。
-3. **驗收成果**：
-   - 約 1~2 分鐘建置完成後，即可於 [https://wupojung.github.io/](https://wupojung.github.io/) 查驗線上站點。
+2. In your GitHub repository, navigate to **Settings** → **Pages**.
+3. Under **Build and deployment**, select **Deploy from a branch**.
+4. Set the branch to `main` and folder to `/ (root)`, then click **Save**.
+5. The live site will be accessible at [https://wupojung.github.io/DIC1_PersonalPage/](https://wupojung.github.io/DIC1_PersonalPage/) (or [https://github.com/wupojung/DIC1_PersonalPage](https://github.com/wupojung/DIC1_PersonalPage)).
 
 ---
 
-## 📬 學生 / 作者資訊 (Contact)
+## 📬 Contact & Links
 
-- **作者姓名：** 吳柏瀧 (Po-Lung Wu)
-- **現任職務：** 嶺東科技大學 數位媒體設計系 專任講師
-- **社群職務：** 中部獨立勇者交流會 (TiGG) 共同創辦人
-- **電子信箱：** [wupojung@gmail.com](mailto:wupojung@gmail.com)
-- **GitHub：** [https://github.com/wupojung](https://github.com/wupojung)
-- **詳細履歷：** [HackMD 線上版](https://hackmd.io/@wupojung/polungwu-cv)
-- **作業項目：** DIC 1 (Do In Class 1)
+- **Author:** Po-Lung Wu (吳柏瀧)
+- **Affiliation:** Ph.D. Student, Dept. of Computer Science & Engineering, National Chung Hsing University (國立中興大學 資訊工程學系 博士班)
+- **Email:** [wupojung@gmail.com](mailto:wupojung@gmail.com)
+- **GitHub:** [@wupojung](https://github.com/wupojung)
+- **Online CV:** [HackMD CV Profile](https://hackmd.io/@wupojung/polungwu-cv)
+- **Live Demo:** [https://github.com/wupojung/DIC1_PersonalPage](https://github.com/wupojung/DIC1_PersonalPage)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).

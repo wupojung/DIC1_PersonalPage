@@ -836,9 +836,20 @@ body {
   transition: var(--transition-smooth);
 }
 
+.edu-item.current-edu {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(56, 189, 248, 0.04) 100%);
+  border-color: rgba(99, 102, 241, 0.35);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.08);
+}
+
 .edu-item:hover {
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.12);
+}
+
+.edu-item.current-edu:hover {
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 6px 25px rgba(99, 102, 241, 0.15);
 }
 
 .edu-badge {
@@ -850,6 +861,12 @@ body {
   padding: 2px 8px;
   border-radius: 4px;
   margin-bottom: 6px;
+}
+
+.edu-badge.nchu-badge {
+  color: var(--accent-cyan);
+  background: rgba(56, 189, 248, 0.14);
+  border: 1px solid rgba(56, 189, 248, 0.28);
 }
 
 .edu-school {
