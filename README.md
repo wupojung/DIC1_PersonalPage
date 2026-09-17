@@ -1,12 +1,13 @@
 # Po-Lung Wu (吳柏瀧) | Personal Portfolio & Live Dashboard
 
 [![GitHub Repo](https://img.shields.io/badge/GitHub-DIC1__PersonalPage-blue?style=flat-square&logo=github)](https://github.com/wupojung/DIC1_PersonalPage)
+[![Live Demo](https://img.shields.io/badge/Demo-GitHub%20Pages-success?style=flat-square&logo=githubpages&logoColor=white)](https://wupojung.github.io/DIC1_PersonalPage/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
-> 🔗 **Live Demo:** [https://github.com/wupojung/DIC1_PersonalPage](https://github.com/wupojung/DIC1_PersonalPage)
+> 🔗 **Live Demo:** [https://wupojung.github.io/DIC1_PersonalPage/](https://wupojung.github.io/DIC1_PersonalPage/)
 
 A modern, high-performance personal digital station and portfolio for **Po-Lung Wu (吳柏瀧)** — Ph.D. Student at Dept. of Computer Science & Engineering, National Chung Hsing University (NCHU CSE), Co-founder of TiGG (Taiwan Indie Game Group), and Senior Technical Consultant in AIoT, Digital Twins, and Computer Graphics.
 
@@ -129,7 +130,7 @@ This repository is configured for direct deployment via GitHub Pages:
 2. In your GitHub repository, navigate to **Settings** → **Pages**.
 3. Under **Build and deployment**, select **Deploy from a branch**.
 4. Set the branch to `main` and folder to `/ (root)`, then click **Save**.
-5. The live site will be accessible at [https://wupojung.github.io/DIC1_PersonalPage/](https://wupojung.github.io/DIC1_PersonalPage/) (or [https://github.com/wupojung/DIC1_PersonalPage](https://github.com/wupojung/DIC1_PersonalPage)).
+5. The live site will be accessible at [https://wupojung.github.io/DIC1_PersonalPage/](https://wupojung.github.io/DIC1_PersonalPage/).
 
 ---
 
@@ -140,7 +141,7 @@ This repository is configured for direct deployment via GitHub Pages:
 - **Email:** [wupojung@gmail.com](mailto:wupojung@gmail.com)
 - **GitHub:** [@wupojung](https://github.com/wupojung)
 - **Online CV:** [HackMD CV Profile](https://hackmd.io/@wupojung/polungwu-cv)
-- **Live Demo:** [https://github.com/wupojung/DIC1_PersonalPage](https://github.com/wupojung/DIC1_PersonalPage)
+- **Live Demo:** [https://wupojung.github.io/DIC1_PersonalPage/](https://wupojung.github.io/DIC1_PersonalPage/)
 
 ---
 
